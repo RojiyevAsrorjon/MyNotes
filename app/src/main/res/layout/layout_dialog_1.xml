@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_layout"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="28dp"
+        android:layout_height="3dp"
+        android:background="#8F8F8F"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/vview"
+        android:layout_marginTop="8dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/vview"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Delete note"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/deleteText"
+        android:drawablePadding="16dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/deleteText"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Delete this note?"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/deleteThisText"
+        android:drawablePadding="16dp"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_delete_button"
+        app:layout_constraintTop_toBottomOf="@id/deleteThisText"
+        android:layout_marginTop="16dp"
+        android:id="@+id/deleteButton"
+        app:layout_constraintLeft_toRightOf="@id/cancelButton"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="DELETE"
+        android:textColor="@color/white"
+        app:layout_constraintWidth_percent="0.35"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_delete_button_un"
+        app:layout_constraintTop_toBottomOf="@id/deleteThisText"
+        android:layout_marginTop="16dp"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/cancelButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/deleteButton"
+        app:layout_constraintWidth_percent="0.35"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

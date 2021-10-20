@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/screenNote">
+
+    <fragment
+        android:id="@+id/screenAdd"
+        android:name="uz.gita.mynotes.ui.fragment.ScreenAdd"
+        tools:layout="@layout/screen_add"
+        android:label="ScreenAdd" />
+    <fragment
+        android:id="@+id/screenNote"
+        android:name="uz.gita.mynotes.ui.fragment.ScreenNote"
+        tools:layout="@layout/screen_main"
+        android:label="ScreenNote" >
+        <action
+            android:id="@+id/action_screenNote_to_screenAdd"
+            app:destination="@id/screenAdd"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_screenNote_to_screenDetail"
+            app:destination="@id/screenDetail"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_screenNote_to_screenDeleted"
+            app:destination="@id/screenDeleted" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenDetail"
+        android:name="uz.gita.mynotes.ui.fragment.ScreenDetail"
+        tools:layout="@layout/screen_detail"
+        android:label="ScreenDetail" >
+        <action
+            android:id="@+id/action_screenDetail_to_screenEdit"
+            app:destination="@id/screenEdit"
+            app:popUpTo="@id/screenDetail"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenDeleted"
+        android:name="uz.gita.mynotes.ui.fragment.ScreenDeleted"
+        tools:layout="@layout/layout_deleted"
+        android:label="ScreenDeleted" />
+    <fragment
+        android:id="@+id/screenEdit"
+        tools:layout="@layout/screen_edit"
+        android:name="uz.gita.mynotes.ui.fragment.ScreenEdit"
+        android:label="ScreenEdit" />
+    <action android:id="@+id/action_global_screenNote" app:destination="@id/screenNote" />
+</navigation>

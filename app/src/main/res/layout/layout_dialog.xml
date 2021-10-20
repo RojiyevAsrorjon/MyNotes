@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_layout"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="28dp"
+        android:layout_height="3dp"
+        android:background="#8F8F8F"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/vview"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/vview"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:drawableLeft="@drawable/ic_refresh_buttons"
+        android:text="Restore"
+        android:textSize="20sp"
+        android:id="@+id/restoreButton"
+        android:drawablePadding="16dp"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/restoreButton"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:drawableLeft="@drawable/ic_delete_dialog"
+        android:text="Delete"
+        android:textSize="20sp"
+        android:id="@+id/deleteButton"
+        android:drawablePadding="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
